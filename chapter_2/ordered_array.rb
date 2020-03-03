@@ -6,4 +6,25 @@ class OrderedArray
   def initialize(array)
     @array = array.sort
   end
+
+  def read(index)
+    @array[index]
+  end
+
+  def search(value)
+    @array.find { |x| return true if x == value }
+  end
+
+  def insert(value)
+    insert_at = @array.bsearch_index { |x| x >= value }
+    if insert_at
+      @array.insert(insert_at, value)
+    else
+      @array << value
+    end
+  end
+
+  def delete(value)
+    @array.delete(value)
+  end
 end
