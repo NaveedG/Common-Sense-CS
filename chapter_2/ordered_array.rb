@@ -11,8 +11,27 @@ class OrderedArray
     @array[index]
   end
 
-  def search(value)
+  def linear_search(value)
     @array.find { |x| return true if x == value }
+  end
+
+  def binary_search(value)
+    first_element = 0
+    last_element = @array.length - 1
+
+    while first_element <= last_element do
+      midpoint = (first_element + last_element) / 2
+      mid_value = @array[midpoint]
+
+      if mid_value == value
+        return true
+      elsif mid_value > value
+        last_element = midpoint - 1
+      elsif mid_value < value
+        first_element = midpoint + 1
+      end
+    end
+    return nil
   end
 
   def insert(value)
