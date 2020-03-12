@@ -12,3 +12,5 @@ function reverseString(string) {
 
   return reverseArray.join('')
 }
+
+console.log(reverseString('hello')) // olleh
