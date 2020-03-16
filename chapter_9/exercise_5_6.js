@@ -4,7 +4,7 @@ function reverseString(string) {
   if (string === '')
     return string
   else
-    return reverseString(string.substr(1)) + string.charAt(0)
+    return reverseString(string.slice(1, string.length)) + string[0]
 }
 
 console.log(reverseString('hello')) // olleh
