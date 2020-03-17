@@ -1,11 +1,11 @@
 // Write a recursive function that prints out all even numbers from 2 until 100.
 
-function printNumbers(num) {
+printNumbers = num => {
   console.log(num)
-  if (num < 100)
-    printNumbers(num + 2)
-  else
+  if (num >= 100)
     return
+  else
+    printNumbers(num + 2)
 }
 
 printNumbers(2)

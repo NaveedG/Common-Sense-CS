@@ -1,11 +1,11 @@
 // Write a function that prints to the terminal "HELLO" 10 times - but don’t use a loop! Use a recursive function instead.
 
-function hello(num) {
+printHello = num => {
   console.log('HELLO')
   if (num === 1)
-    return num
+    return
   else
-    hello(num - 1)
+    printHello(num - 1)
 }
 
-hello(10)
+printHello(10)
