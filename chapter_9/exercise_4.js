@@ -1,6 +1,6 @@
 // Write a recursive function that accepts an array of numbers and returns the sum.
 
-function returnSum(arr) {
+returnSum = arr => {
   if (arr.length === 1)
     return arr[0]
   else
