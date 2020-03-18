@@ -1,11 +1,11 @@
 // Write a recursive function that accepts two numbers and calculates one by the power of the other. For example, if the numbers were 2 and 5, it would calculate 25. 
 // Do not use any built-in power operations provided by your computer language.
 
-findPower = (x, y, power = y) => {
+findPower = (x, y) => {
   if (x === 1)
-    return power
+    return y
   else
-    return findPower(x - 1, y, power * y)
+    return y * findPower(x - 1, y)
 }
 
 console.log(findPower(1, 5)) // 5
