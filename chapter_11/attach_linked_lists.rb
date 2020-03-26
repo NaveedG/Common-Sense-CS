@@ -19,6 +19,7 @@ class LinkedList
     @last_node = last_node
   end
 
+  # two linked lists attachment method
   def attach_linked_list(linked_list)
     if !(@first_node)
       @first_node = linked_list.first_node
@@ -26,7 +27,8 @@ class LinkedList
     else
       linked_list.first_node.previous_node = @last_node
       @last_node.next_node = linked_list.first_node
-      @last_node = linked_list.first_node
+      @last_node = linked_list.last_node
+      linked_list.first_node = @first_node
     end
   end
 
