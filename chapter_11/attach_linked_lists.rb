@@ -18,7 +18,7 @@ class LinkedList
     @first_node = first_node
   end
 
-  # attaching two linked lists method
+  # attach linked list method
   def attach_list(second_list)
     current_node = @first_node
     current_node = current_node.next_node while current_node.next_node
