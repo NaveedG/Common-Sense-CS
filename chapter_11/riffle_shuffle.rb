@@ -31,4 +31,17 @@ class LinkedList
     new_arr
   end
 
+  def riffle_shuffle(second_list)
+    arr = self.collect_data.concat(second_list.collect_data).sort
+    new_list = LinkedList.new(Node.new(arr[0]))
+    current_node = new_list.first_node
+
+    arr[1..-1].each do |x|
+      current_node.next_node = Node.new(x)
+      current_node = current_node.next_node
+    end
+
+    new_list
+  end
+
 end
