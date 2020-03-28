@@ -24,7 +24,7 @@ class LinkedList
     current_node = @first_node
 
     while current_node do
-      new_arr.push(current_node)
+      new_arr.push(current_node.data)
       current_node = current_node.next_node
     end
 
@@ -45,3 +45,25 @@ class LinkedList
   end
 
 end
+
+one = Node.new(1)
+three = Node.new(3)
+five = Node.new(5)
+seven = Node.new(7)
+one.next_node = three
+three.next_node = five
+five.next_node = seven
+list_1 = LinkedList.new(one)
+p list_1.collect_data # [1, 3, 5, 7]
+
+two = Node.new(2)
+four = Node.new(4)
+six = Node.new(6)
+eight = Node.new(8)
+two.next_node = four
+four.next_node = six
+six.next_node = eight
+list_2 = LinkedList.new(two)
+p list_2.collect_data # [2, 4, 6, 8]
+
+p list_1.riffle_shuffle(list_2).collect_data # [1, 2, 3, 4, 5, 6, 7, 8]
