@@ -28,3 +28,10 @@ class Node {
     return total
   }
 }
+
+let root = new Node(5)
+root.insertNode(7)
+root.insertNode(1)
+root.insertNode(9)
+root.insertNode(3)
+console.log(root.countNodes())

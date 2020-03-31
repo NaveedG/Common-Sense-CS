@@ -1,6 +1,6 @@
 // In your favorite programming language, use a stack to implement an algorithm that reverses a string.
 
-function reverseString(string) {
+reverseString = string => {
   const stringArray = string.split('')
   const reverseArray = []
 
