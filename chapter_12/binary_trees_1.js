@@ -1,4 +1,4 @@
-// Write a function that returns the sum of all the keys in a binary tree.
+// Write a function that counts the number of items in a binary tree.
 
 class Node {
   constructor(data) {
@@ -20,6 +20,7 @@ class Node {
         this.left = new Node(data)
   }
 
+  // recursive node count function
   countNodes = (total = 1) => {
     if (this.right)
       total += this.right.countNodes()

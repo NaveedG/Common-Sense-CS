@@ -20,6 +20,7 @@ class Node {
         this.left = new Node(data)
   }
 
+  // recursive sum of all keys function
   findSum = () => {
     let total = this.data
     if (this.right)
