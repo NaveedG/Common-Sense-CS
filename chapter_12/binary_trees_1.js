@@ -34,4 +34,4 @@ root.insertNode(7)
 root.insertNode(1)
 root.insertNode(9)
 root.insertNode(3)
-console.log(root.countNodes())
+console.log(root.countNodes()) // 5
