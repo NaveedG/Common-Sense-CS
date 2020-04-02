@@ -21,17 +21,22 @@ class Node {
         this.left = new Node(data)
   }
 
-  findMax = (arr = [this.data]) => {
-    if (this.right) {
-      arr.push(this.right.data)
-      this.right.findMax(arr)
-    }
+  // recursive maximum value finder function
+  findMax = (arr = []) => {
+    if (this.data) { arr.push(this.data) }
+    if (this.right) { this.right.findMax(arr) }
+    if (this.left) { this.left.findMax(arr) }
 
-    if (this.left) {
-      arr.push(this.left.data)
-      this.left.findMax(arr)
-    }
-
-    return Math.max(...arr)
+    if (arr.length > 0)
+      return Math.max(...arr)
+    else
+      return null
   }
 }
+
+let root = new Node(5)
+root.insertNode(7)
+root.insertNode(1)
+root.insertNode(9)
+root.insertNode(3)
+console.log(root.findMax()) // 9
