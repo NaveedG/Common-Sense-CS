@@ -23,10 +23,8 @@ class Node {
   // recursive sum of all keys function
   findSum = () => {
     let total = this.data
-    if (this.right)
-      total += this.right.findSum()
-    if (this.left)
-      total += this.left.findSum()
+    if (this.right) { total += this.right.findSum() }
+    if (this.left) { total += this.left.findSum() }
     return total
   } 
 }

@@ -22,10 +22,8 @@ class Node {
 
   // recursive node count function
   countNodes = (total = 1) => {
-    if (this.right)
-      total += this.right.countNodes()
-    if (this.left)
-      total += this.left.countNodes()
+    if (this.right) { total += this.right.countNodes() }
+    if (this.left) { total += this.left.countNodes() }
     return total
   }
 }
