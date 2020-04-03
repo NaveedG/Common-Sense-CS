@@ -21,6 +21,7 @@ class Node {
         this.left = new Node(data)
   }
 
+  // recursive tree height finder function
   findHeight = (rightTotal = 0, leftTotal = 0) => {
     if (this.right) { rightTotal += this.right.findHeight() }
     if (this.left) { leftTotal += this.left.findHeight() }
@@ -32,3 +33,12 @@ class Node {
   }
 
 }
+
+let root = new Node(5)
+root.insertNode(7)
+root.insertNode(1)
+root.insertNode(9)
+root.insertNode(3)
+root.insertNode(6)
+root.insertNode(11)
+console.log(root.findHeight()) // 4
