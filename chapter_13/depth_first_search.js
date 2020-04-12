@@ -10,7 +10,7 @@ class Node {
     this.children.push(new Node(data))
   }
 
-  // depth first search on the root node of a graph
+  // depth first search via root node of a graph
   depthFirstSearch = value => {
     let stack = [this]
 

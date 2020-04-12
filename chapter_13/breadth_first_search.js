@@ -26,3 +26,11 @@ class Node {
     return false
   }
  }
+
+let root = new Node(5)
+root.addChild(7)
+root.addChild(19)
+console.log(root.breadthFirstSearch(3)) // false
+console.log(root.breadthFirstSearch(5)) // true
+console.log(root.breadthFirstSearch(7)) // true
+console.log(root.breadthFirstSearch(19)) // true
